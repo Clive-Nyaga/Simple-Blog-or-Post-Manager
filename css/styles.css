@@ -114,3 +114,20 @@ button:hover {
     border-radius: 4px;
     margin: 10px 0;
 }
+
+.hidden {
+    display: none;
+}
+
+#edit-btn, #delete-btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#delete-btn {
+    background-color: #d9534f;
+}
+
+#cancel-edit {
+    margin-top: 10px;
+}
