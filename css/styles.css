@@ -131,3 +131,44 @@ button:hover {
 #cancel-edit {
     margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .left-panel, .right-panel {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    .post-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .post-item img {
+        width: 100%;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+    
+    #post-detail img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    button {
+        margin-bottom: 10px;
+    }
+    
+    #edit-btn, #delete-btn {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
