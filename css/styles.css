@@ -130,6 +130,11 @@ button:hover {
 
 #cancel-edit {
     margin-top: 10px;
+    background-color: #d9534f;
+}
+
+#cancel-edit:hover {
+    background-color: #c9302c;
 }
 
 @media (max-width: 768px) {
