@@ -1,12 +1,12 @@
 // API base URL for JSON server
-const BASE_URL = 'http://localhost:3000';
+const baseUrl = 'http://localhost:3000';
 // Global variables to store posts and the currently selected post
 let posts = [];
 let currentPost = null;
 
 // Fetch and display all posts from the API
 function displayPosts() {
-    fetch(`${BASE_URL}/posts`)
+    fetch(`${baseUrl}/posts`)
         .then(response => response.json())
         .then(data => {
             posts = data;
@@ -74,7 +74,7 @@ function deletePost() {
     const confirmDelete = confirm(`Are you sure you want to delete the post titled "${currentPost.title}"?`);
 
     if (confirmDelete) {
-        fetch(`${BASE_URL}/posts/${currentPost.id}`, {
+        fetch(`${baseUrl}/posts/${currentPost.id}`, {
             method: 'DELETE'
         })
         .then(() => {
@@ -112,7 +112,7 @@ function addNewPostListener() {
                     image: e.target.result
                 };
                 
-                fetch(`${BASE_URL}/posts`, {
+                fetch(`${baseUrl}/posts`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -135,7 +135,7 @@ function addNewPostListener() {
                 image: 'https://via.placeholder.com/300x200?text=New+Post'
             };
             
-            fetch(`${BASE_URL}/posts`, {
+            fetch(`${baseUrl}/posts`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -166,7 +166,7 @@ function setupEditForm() {
         
         displayPostDetail(currentPost);
 
-        fetch(`${BASE_URL}/posts/${currentPost.id}`, {
+        fetch(`${baseUrl}/posts/${currentPost.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
