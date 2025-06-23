@@ -48,7 +48,6 @@ function displayPostDetail(post) {
         <button id="delete-btn">Delete</button>
     `;
     
-    // Add event listeners to edit and delete buttons
     document.getElementById('edit-btn').addEventListener('click', showEditForm);
     document.getElementById('delete-btn').addEventListener('click', deletePost);
 }
@@ -60,7 +59,7 @@ function showEditForm() {
     document.getElementById('edit-post-form').classList.remove('hidden');
 }
 
-// Delete the entire post (including from db.json)
+// Delete the entire post
 function deletePost() {
     if (!currentPost) {
         console.error("No post selected for deletion.");
@@ -74,18 +73,13 @@ function deletePost() {
             method: 'DELETE'
         })
         .then(() => {
-            // Remove the post from the local array
             posts = posts.filter(post => post.id !== currentPost.id);
-
-            // Refresh the list and clear the detail section
             displayPosts();
             document.getElementById('post-detail').innerHTML = `
                 <h3>Post Details</h3>
                 <p>Click on a post to view details</p>
             `;
             document.getElementById('edit-post-form').classList.add('hidden');
-
-            // Reset the currentPost
             currentPost = null;
         })
         .catch(error => console.error('Error deleting post:', error));
@@ -104,10 +98,6 @@ function addNewPostListener() {
         const imageFile = document.getElementById('image').files[0];
         
         if (imageFile) {
-            if (imageFile.size > 2 * 1024 * 1024) { // 2MB limit
-                alert('Image size must be less than 2MB');
-                return;
-            }
             const reader = new FileReader();
             reader.onload = function(e) {
                 const newPost = {
@@ -171,7 +161,6 @@ function setupEditForm() {
         
         displayPostDetail(currentPost);
 
-        // Update db.json (PATCH request)
         fetch(`${BASE_URL}/posts/${currentPost.id}`, {
             method: 'PATCH',
             headers: {
@@ -200,5 +189,4 @@ function main() {
     setupEditForm();
 }
 
-// Start application when DOM is loaded
 document.addEventListener('DOMContentLoaded', main);
