@@ -130,6 +130,6 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 - Update documentation as needed
 - Keep commits focused and descriptive
 
----
+## Copyright
 
-© 2025 Clive Nyaga Kagotho. All rights reserved.
+**© 2025 Clive Nyaga Kagotho. All rights reserved.**
