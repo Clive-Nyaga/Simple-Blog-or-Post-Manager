@@ -1,6 +1,6 @@
 # Blog Post Manager
 
-A simple web application for managing blog posts with full CRUD (Create, Read, Update, Delete) functionality. Built with vanilla JavaScript and uses JSON Server for data persistence.
+A simple web application for managing blog posts with full CRUD (Create, Read, Update, Delete) functionality. Built with JavaScript and uses JSON Server for data persistence.
 
 ## Features
 
@@ -73,7 +73,7 @@ Simple-Blog-or-Post-Manager/
 
 ## Technical Details
 
-- **Frontend**: Vanilla HTML, CSS, and JavaScript
+- **Frontend**: HTML, CSS, and JavaScript
 - **Backend**: JSON Server for REST API
 - **Data Storage**: JSON file (db.json)
 - **Image Handling**: Base64 encoding for uploaded images
@@ -94,3 +94,42 @@ Works with all modern web browsers that support:
 - Fetch API
 - FileReader API
 - FormData handling
+
+## Future Features
+
+- **Search Functionality**: Search posts by title, content, or author
+- **Categories/Tags**: Organize posts with categories and tags
+- **User Authentication**: Login system for multiple users
+- **Rich Text Editor**: WYSIWYG editor for post content
+- **Image Gallery**: Better image management and gallery view
+- **Export/Import**: Export posts to various formats (PDF, Word, etc.)
+- **Comments System**: Allow comments on posts
+- **Post Scheduling**: Schedule posts for future publication
+- **Dark Mode**: Toggle between light and dark themes
+- **Pagination**: Handle large numbers of posts efficiently
+- **Backup/Restore**: Backup and restore functionality for data
+- **Mobile App**: Native mobile application version
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+### How to Contribute
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+### Guidelines
+
+- Follow the existing code style
+- Add comments for complex functionality
+- Test your changes thoroughly
+- Update documentation as needed
+- Keep commits focused and descriptive
+
+---
+
+© 2025 Clive Nyaga Kagotho. All rights reserved.
